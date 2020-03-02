@@ -94,9 +94,9 @@ class History:
                                               "desired.")
 
         # Lable to display calculation history to user
-        self.calc_history = Label(self.history_frame, text=history_string,
+        self.calc_history_label = Label(self.history_frame, text=history_string,
                                   bg=background_color, font="arial 12", justify=LEFT)
-        self.calc_history.grid(row=2)
+        self.calc_history_label.grid(row=2)
 
         # Export / dismiss Button Frame
         self.export_dismiss_frame = Frame(self.history_frame)
@@ -107,7 +107,7 @@ class History:
                                     text="export",font="arial 12 bold",
                                     bg="#4D8889", fg="#F7FBFD",
                                     padx=10, pady=10,
-                                    command=lambda: self.export(self.calc_history))
+                                    command=lambda: self.export(calc_history))
         self.export_button.grid(row=1)
 
         # Dismiss Button
